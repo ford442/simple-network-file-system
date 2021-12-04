@@ -1,5 +1,5 @@
-CXX := g++
-CXXFLAGS := -g -O0 -std=c++11
+CXX := em++
+CXXFLAGS := -g -O0 -std=c++11 --closure 0 -sFORCE_FILESYSTEM=1
 
 SRC	:= BasicFileSys.cpp Disk.cpp FileSys.cpp  server.cpp Shell.cpp
 HDR	:= BasicFileSys.h  Blocks.h  Disk.h  FileSys.h  Shell.h
