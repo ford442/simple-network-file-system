@@ -8,12 +8,12 @@ OBJ	:= $(patsubst %.cpp, %.o, $(SRC))
 all: nfsserver nfsclient
 
 nfsserver: $(OBJ)
-	$(CXX) -o $@ $(OBJ)
+	$(CXX) -o server.html $(OBJ)
 	rm -f DISK
 nfsclient: Shell.o client.o
 	$(CXX) -o $@ Shell.o client.o
 %.o:	%.cpp $(HDR)
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
+	$(CXX) $(CXXFLAGS) -c -o client.html $<
 
 clean:
 	rm -f nfsserver nfsclient *.o DISK
